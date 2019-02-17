@@ -5,13 +5,27 @@
 	<title>タイトル</title>
 </head>
 <body>
+	<h2>協賛大学</h2>
+	<ul>
+		<% @school_links.each do |link| %>
+			<a href= "<%= link %>"">
+				<li>
+					<%= @school_name[link] %><br><br>
+				</li>
+			</a>
+		<% end %>
+	</ul>
+
+
 	<h2>協賛企業</h2>
 	<ul>
-		<% @links.each do |link| %>
-			<li>
-				<%= link %><br><br>
-				<%= @imgs[link] %>
-			</li>
+		<% @supporter_links.each do |link| %>
+			<a href= "<%= link %>"">
+				<li>
+					<%= @supporter_name[link] %><br><br>
+					<%= @supporter_imgs[link] %>
+				</li>
+			</a>
 		<% end %>
 	</ul>
 </body>
